@@ -91,7 +91,6 @@
         };
 
         // 4. Fetch Data with Axios
-        // NOTE: Axios requires Live Server (http://) not file:// due to CORS
         const fetchMenuData = async () => {
             try {
                 const response = await axios.get('menu.json');
@@ -100,8 +99,6 @@
             } catch (error) {
                 console.error("Gagal mengambil data JSON (Mungkin masalah CORS file://):", error);
                 
-                // FALLBACK DATA jika user tidak menggunakan Live Server
-                // Ini memastikan demo tetap jalan meskipun dibuka langsung
                 const fallbackData = [
                     { id: 1, name: "Caramel Macchiato", description: "Espresso, steamed milk, vanilla syrup, caramel drizzle.", price: "IDR 35.000", category: "coffee", image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=600&q=80", rating: 4.9, badges: ["Customer Favorite"] },
                     { id: 2, name: "Ice Lemon Tea", description: "Segar dan dingin, perpaduan teh dan lemon.", price: "IDR 18.000", category: "non-coffee", image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80", rating: 4.5, badges: [] },
@@ -110,7 +107,6 @@
                 allMenuItems = fallbackData;
                 renderMenu(allMenuItems);
                 
-                // Tampilkan pesan error kecil di console/UI untuk dev
                 const errMsg = document.createElement('div');
                 errMsg.className = 'text-center text-xs text-red-400 mt-2';
                 errMsg.innerText = '*Running in Fallback Mode (Check Console for CORS info)';
@@ -120,3 +116,22 @@
 
         // Initialize
         fetchMenuData();
+
+        // 5. Scroll To Top Logic
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+            } else {
+                scrollToTopBtn.classList.add('translate-y-20', 'opacity-0');
+            }
+        });
+
+        // Menangani klik tombol
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
