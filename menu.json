@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Caramel Macchiato",
+    "description": "Espresso dengan susu steamed, vanila, dan topping saus karamel.",
+    "price": "IDR 35.000",
+    "category": "coffee",
+    "image": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.9,
+    "badges": ["Customer Favorite"]
+  },
+  {
+    "id": 2,
+    "name": "Signature Matcha Latte",
+    "description": "Matcha premium Jepang dengan susu segar dan sedikit madu.",
+    "price": "IDR 38.000",
+    "category": "non-coffee",
+    "image": "https://images.unsplash.com/photo-1515825838458-f2a94b20105a?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "badges": []
+  },
+  {
+    "id": 3,
+    "name": "Classic Beef Burger",
+    "description": "Patty daging sapi asli 150g, keju cheddar, selada segar, dan saus rahasia.",
+    "price": "IDR 55.000",
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "badges": ["Best Food"]
+  },
+  {
+    "id": 4,
+    "name": "V60 Manual Brew",
+    "description": "Kopi single origin dengan metode tuang manual untuk rasa yang bersih.",
+    "price": "IDR 30.000",
+    "category": "coffee",
+    "image": "best_beverage.jpg",
+    "rating": 5.0,
+    "badges": ["Best Beverage"]
+  },
+  {
+    "id": 5,
+    "name": "Spaghetti Carbonara",
+    "description": "Pasta creamy dengan smoked beef, parmesan, dan kuning telur.",
+    "price": "IDR 48.000",
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "badges": []
+  },
+  {
+    "id": 6,
+    "name": "Berry Refresher",
+    "description": "Campuran soda, stroberi, lemon, dan daun mint segar.",
+    "price": "IDR 28.000",
+    "category": "non-coffee",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "badges": []
+  }
+]
